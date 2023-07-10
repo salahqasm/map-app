@@ -1,0 +1,35 @@
+.cardMain {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    background-color: #f3f3f4;
+    width: 90%;
+    border-radius: 8px;
+    transition: .3s ease;
+    border: 2px solid transparent;
+    margin-bottom: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.imgCon {
+
+    margin: auto;
+    padding: 2rem;
+}
+
+
+
+
+.cardMain:focus,
+.cardMain:hover {
+    outline: none;
+    border-color: rgb(11 117 223);
+    box-shadow: 0 0 0 4px rgba(76, 197, 234, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    transform: scale(104%);
+}
+.cardMain:active{
+    transform: scale(98%);
+    
+    
+}
