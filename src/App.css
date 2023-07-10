@@ -1,30 +1,37 @@
-body{
+body {
   background-color: rgb(230, 229, 229);
 }
-.mainDiv{
+
+.mainDiv {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-gap: 1rem;
   height: 80vh;
-  margin:1rem 3rem 1rem 3rem;
+  margin: 1rem 3rem 1rem 3rem;
 }
-.leftDiv{
-margin:1rem;
-}
-.rightDiv{
-margin:1rem;
 
+.leftDiv {
+  margin: 1rem;
+
+}
+
+.rightDiv {
+  margin: 1rem;
 }
 
 .map-container {
+  margin: auto;
+  margin-top: 1rem;
   height: 80%;
 }
 
-.mapboxgl-canvas{
+.mapboxgl-canvas {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.mapboxgl-ctrl-attrib{
-  display:none;
+.mapboxgl-ctrl-attrib {
+  display: none;
 }
+
+
