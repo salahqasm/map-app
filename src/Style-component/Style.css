@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #fafaff;
     color: #000000;
     width: var(--container_width);
     overflow: hidden;
@@ -27,6 +27,13 @@
     font-weight: 600;
     letter-spacing: -1px;
     font-size: 14px;
+    transition: 0.4s;
+
+}
+
+.radio-input label:not(:has(input:checked)):hover {
+    background-color: rgb(213, 231, 250);
+    transition: 0.2s;
 }
 
 .selection {
@@ -39,12 +46,14 @@
     top: 0;
     transition: .20s ease;
 }
-.active{
+
+.active {
     background-color: rgb(11 117 223);
     display: inline-block;
     color: #fff;
 
 }
+
 .radio-input label:has(input:checked) {
     color: #fff;
 }

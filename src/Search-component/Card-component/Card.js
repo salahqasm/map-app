@@ -11,7 +11,7 @@ function Card({ obj, map }) {
             <img src={pic} width={40} />
         </div>
         <div>
-            <h2>{obj.text}</h2>
+            <h3>{obj.text}</h3>
             <p>{obj.place_name}</p>
 
         </div>
