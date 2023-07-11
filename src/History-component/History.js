@@ -11,13 +11,12 @@ function History({ map, refresh }) {
 
     function onClickHandler(elem){
         map.current.flyTo({ center: elem.center, zoom: 10 });
-        console.log(elem);
     }
 
     return <label className="popup">
         <input type="checkbox" />
         <div className="burger" tabIndex="0">
-            <img src={hisLogo} alt="History" width={23} />
+            <img src={hisLogo} alt="History" width={23} title="History"/>
         </div>
         <nav className="popup-window">
             <ul>

@@ -1,17 +1,24 @@
 import './App.css';
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import 'mapbox-gl/dist/mapbox-gl.css';
+import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions"
+import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"
 import Search from './Search-component/Search';
 import Style from './Style-component/Style';
 import Zoom from './Zoom-component/Zoom';
+
+
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
 
 function App() {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
-  const [zoom, setZoom] = useState(9);
+  const directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken,
+    unit: 'metric',
+    profile: 'mapbox/driving'
+  });
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -25,8 +32,13 @@ function App() {
       name: "Amman, Jordan",
       center: [35.923962, 31.951569]
     }]))
-    console.log("test");
-  });
+    mapboxgl.setRTLTextPlugin(
+      'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
+      null,
+      true);
+    map?.current?.addControl(directions, 'top-left');
+
+  }, []);
 
   return (
     <div className='mainDiv'>
@@ -34,13 +46,14 @@ function App() {
         <Search map={map} />
       </div>
       <div className='rightDiv'>
-        
+
         <Style map={map} />
         <div ref={mapContainer} className="map-container" />
         <br />
         <Zoom map={map} />
+        
       </div>
-    </div>
+    </div >
 
   );
 }

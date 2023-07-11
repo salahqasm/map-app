@@ -10,6 +10,8 @@ function Search({ map }) {
     const [msg, setMsg] = useState("");
     const [refresh, setRefresh] = useState(0);
     async function search(e) {
+
+
         let regex = /^[a-zA-Z0-9 ]+$/;
         if (regex.test(e.target.value) || e.target.value === "")
             if (e.target.value !== "") {

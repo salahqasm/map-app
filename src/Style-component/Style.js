@@ -18,11 +18,12 @@ function Style({ map }) {
                     break;
                 default: break;
             }
+
     }, [styleNum])
     return <>
         <div className="radio-input">
             <label onClick={() => setNum(1)} className={styleNum === 1 && 'active'}>
-                <input type="radio" id="value-1" name="value-radio" value="value-1" />
+                <input type="radio" id="value-1" name="value-radio" value="value-1" checked={styleNum === 1} />
                 <span>Satellite Streets</span>
             </label>
             <label onClick={() => setNum(2)}>

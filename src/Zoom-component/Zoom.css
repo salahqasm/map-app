@@ -21,12 +21,14 @@
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background: rgb(11 117 223);
     cursor: pointer;
-    /* border-radius: 50%; */
-    
+    border-radius: 50%;
+    box-shadow: -2px -2px 37px 0px rgba(17, 17, 119, 0.81);
+    -webkit-box-shadow: -2px -2px 37px 0px rgba(17, 17, 119, 0.81);
+    -moz-box-shadow: -2px -2px 37px 0px rgba(17, 17, 119, 0.81);
 }
 
 .slider::-moz-range-thumb {
