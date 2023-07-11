@@ -20,7 +20,7 @@ function Style({ map }) {
             }
     }, [styleNum])
     return <>
-        <div class="radio-input">
+        <div className="radio-input">
             <label onClick={() => setNum(1)} className={styleNum === 1 && 'active'}>
                 <input type="radio" id="value-1" name="value-radio" value="value-1" />
                 <span>Satellite Streets</span>
@@ -41,7 +41,7 @@ function Style({ map }) {
                 <input type="radio" id="value-3" name="value-radio" value="value-3" />
                 <span>Outdoors</span>
             </label>
-            <span class="selection"></span>
+            <span className="selection"></span>
         </div >
     </>
 }

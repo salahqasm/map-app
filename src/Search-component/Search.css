@@ -40,6 +40,14 @@
     height: 1rem;
    }
    
+   .errorMsg{
+    border: 1px solid black;
+    color:#fa1b68;
+    padding:1rem;
+    border-radius: 8px;
+    width:78%;
+    
+   }
    
    
    
